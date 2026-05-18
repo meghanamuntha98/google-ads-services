@@ -1,35 +1,168 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You - Message Received</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* --- RESET & GLOBAL STYLES --- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-  <title>Thank You</title>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc; /* Cool light gray background */
+            color: #1e293b;
+            line-height: 1.5;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            justify-content: space-between;
+        }
 
-  <link rel="stylesheet" href="style.css">
+        .container {
+            width: 100%;
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* --- THANK YOU CARD CONTENT --- */
+        .thank-you-wrapper {
+            flex-grow: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 60px 0;
+        }
+
+        .thank-you-card {
+            background: #ffffff;
+            padding: 50px 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+            max-width: 600px;
+            width: 100%;
+            text-align: center;
+            border: 1px solid #e2e8f0;
+        }
+
+        /* Custom Modern Success Checkmark Icon */
+        .success-icon {
+            width: 72px;
+            height: 72px;
+            background-color: #eff6ff;
+            color: #2563eb;
+            font-size: 2.5rem;
+            font-weight: 700;
+            line-height: 72px;
+            border-radius: 50%;
+            margin: 0 auto 24px auto;
+        }
+
+        .thank-you-card h1 {
+            font-size: 2.4rem;
+            font-weight: 700;
+            color: #0f172a;
+            margin-bottom: 16px;
+            letter-spacing: -0.02em;
+        }
+
+        .thank-you-card p {
+            font-size: 1.1rem;
+            color: #475569;
+            margin-bottom: 32px;
+        }
+
+        /* PPC Marketing Framework Callout Box */
+        .marketing-note {
+            background-color: #f8fafc;
+            border-left: 4px solid #2563eb;
+            padding: 16px;
+            text-align: left;
+            border-radius: 0 6px 6px 0;
+            margin-bottom: 36px;
+            font-size: 0.95rem;
+            color: #334155;
+            line-height: 1.6;
+        }
+
+        /* Return Button Style */
+        .btn-back {
+            display: inline-block;
+            padding: 14px 28px;
+            font-size: 1rem;
+            font-weight: 600;
+            text-decoration: none !important;
+            background-color: #2563eb;
+            color: #ffffff !important;
+            border: 2px solid #2563eb;
+            border-radius: 6px;
+            transition: all 0.2s ease-in-out;
+            cursor: pointer;
+        }
+
+        .btn-back:hover {
+            background-color: #1d4ed8;
+            border-color: #1d4ed8;
+            transform: translateY(-1px);
+        }
+
+        /* --- FOOTER --- */
+        footer {
+            background-color: #0f172a;
+            color: #94a3b8;
+            padding: 40px 0;
+            text-align: center;
+            font-size: 0.95rem;
+        }
+
+        /* --- RESPONSIVE LAYOUT --- */
+        @media (max-width: 480px) {
+            .thank-you-card {
+                padding: 30px 20px;
+            }
+            .thank-you-card h1 {
+                font-size: 1.8rem;
+            }
+            .thank-you-card p {
+                font-size: 1rem;
+            }
+        }
+    </style>
 </head>
-
 <body>
 
-  <section class="hero">
-
-    <div class="container">
-
-      <h1>Thank You!</h1>
-
-      <p>
-        Your message has been submitted successfully.
-        We will contact you soon.
-      </p>
-
-      <a href="index.html" class="btn btn-primary">
-        Back To Home
-      </a>
-
+    <div class="thank-you-wrapper">
+        <div class="container">
+            <div class="thank-you-card">
+                <div class="success-icon">✓</div>
+                
+                <h1>Thank You!</h1>
+                <p>Your message has been sent successfully. I will get back to you shortly.</p>
+                
+                <div class="marketing-note">
+                    <strong>PPC Conversion Context:</strong> In a live Google Ads environment, navigating to this dedicated confirmation layout triggers the primary conversion pixel tag, cleanly recording a <em>Lead Event</em> in GA4.
+                </div>
+                
+                <a href="index.html" class="btn-back">Return to Portfolio</a>
+            </div>
+        </div>
     </div>
 
-  </section>
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Meghana PPC Portfolio Project</p>
+        </div>
+    </footer>
 
 </body>
 </html>
