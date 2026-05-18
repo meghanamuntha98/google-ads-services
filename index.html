@@ -4,11 +4,283 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Performance-Focused Google Ads Campaigns</title>
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     
-    <link rel="stylesheet" href="style.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc; 
+            color: #1e293b;
+            line-height: 1.5;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* --- HERO SECTION --- */
+        .hero-section {
+            background-color: #ffffff;
+            padding: 100px 0 80px 0;
+            text-align: center;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        .hero-section h1 {
+            font-size: 2.8rem;
+            font-weight: 700;
+            color: #0f172a;
+            line-height: 1.2;
+            margin-bottom: 24px;
+            letter-spacing: -0.02em;
+        }
+
+        .hero-subtext {
+            font-size: 1.2rem;
+            color: #475569;
+            max-width: 700px;
+            margin: 0 auto 36px auto;
+        }
+
+        /* --- BUTTONS --- */
+        .hero-ctas {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .btn-primary, .btn-secondary, .btn-banner {
+            display: inline-block;
+            padding: 14px 28px;
+            font-size: 1rem;
+            font-weight: 600;
+            text-decoration: none !important;
+            border-radius: 6px;
+            transition: all 0.2s ease-in-out;
+            cursor: pointer;
+        }
+
+        .btn-primary {
+            background-color: #2563eb; 
+            color: #ffffff !important;
+            border: 2px solid #2563eb;
+        }
+
+        .btn-primary:hover {
+            background-color: #1d4ed8;
+            border-color: #1d4ed8;
+        }
+
+        .btn-secondary {
+            background-color: transparent;
+            color: #2563eb !important;
+            border: 2px solid #2563eb;
+        }
+
+        .btn-secondary:hover {
+            background-color: #eff6ff;
+        }
+
+        .btn-banner {
+            background-color: #ffffff;
+            color: #2563eb !important;
+            border: 2px solid #ffffff;
+            margin-top: 24px;
+        }
+
+        .btn-banner:hover {
+            background-color: #f1f5f9;
+        }
+
+        /* --- WHY WORK WITH ME (CARD) --- */
+        .info-section {
+            padding: 80px 0;
+        }
+
+        .card {
+            background: #ffffff;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .card h2 {
+            font-size: 2rem;
+            color: #0f172a;
+            margin-bottom: 16px;
+            text-align: center;
+        }
+
+        .card-intro {
+            font-size: 1.1rem;
+            color: #475569;
+            text-align: center;
+            margin-bottom: 28px;
+        }
+
+        .features-list {
+            list-style-type: none;
+            max-width: 550px;
+            margin: 0 auto;
+        }
+
+        .features-list li {
+            font-size: 1.05rem;
+            color: #334155;
+            margin-bottom: 16px;
+            padding-left: 28px;
+            position: relative;
+            text-align: left;
+        }
+
+        .features-list li::before {
+            content: "•";
+            color: #2563eb;
+            font-weight: bold;
+            font-size: 1.5rem;
+            position: absolute;
+            left: 0;
+            top: -4px;
+        }
+
+        /* --- BLUE MIDDLE BANNER --- */
+        .banner-section {
+            background-color: #2563eb;
+            color: #ffffff;
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .banner-section h2 {
+            font-size: 2.2rem;
+            font-weight: 700;
+            margin-bottom: 16px;
+        }
+
+        .banner-section p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto;
+            opacity: 0.95;
+        }
+
+        /* --- CONTACT SECTION --- */
+        .contact-section {
+            background-color: #ffffff;
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .contact-section h2 {
+            font-size: 2.2rem;
+            margin-bottom: 36px;
+            color: #0f172a;
+        }
+
+        .contact-form {
+            max-width: 550px;
+            margin: 0 auto;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            padding: 14px 16px;
+            font-size: 1rem;
+            border: 1px solid #cbd5e1;
+            border-radius: 6px;
+            background-color: #f8fafc;
+            font-family: inherit;
+            outline: none;
+            transition: all 0.2s;
+            text-align: left;
+        }
+
+        .contact-form input:focus, .contact-form textarea:focus {
+            border-color: #2563eb;
+            background-color: #ffffff;
+            box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+        }
+
+        .form-submit-btn {
+            width: 100%;
+            padding: 16px;
+            font-size: 1rem;
+            font-weight: 600;
+            background-color: #2563eb;
+            color: #ffffff !important; /* Crisp white readable text */
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+
+        .form-submit-btn:hover {
+            background-color: #1d4ed8;
+        }
+
+        /* --- FOOTER --- */
+        footer {
+            background-color: #0f172a;
+            color: #94a3b8;
+            padding: 40px 0;
+            text-align: center;
+            font-size: 0.95rem;
+        }
+
+        .footer-link {
+            color: #38bdf8;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 12px;
+        }
+
+        .footer-link:hover {
+            text-decoration: underline;
+        }
+
+        /* --- RESPONSIVE LAYOUT --- */
+        @media (max-width: 768px) {
+            .hero-section h1 {
+                font-size: 2.2rem;
+            }
+            .hero-subtext {
+                font-size: 1.1rem;
+            }
+            .banner-section h2 {
+                font-size: 1.7rem;
+            }
+            .hero-ctas {
+                flex-direction: column;
+            }
+            .btn-primary, .btn-secondary {
+                width: 100%;
+                text-align: center;
+            }
+            .card {
+                padding: 24px;
+            }
+        }
+    </style>
 </head>
 <body>
 
