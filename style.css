@@ -1,277 +1,270 @@
-
+/* --- RESET & GLOBAL STYLES --- */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-  background: #f8fafc;
-  color: #1f2937;
-  line-height: 1.6;
+    font-family: 'Inter', sans-serif;
+    background-color: #f8fafc; /* Crisp, slightly cool light gray background */
+    color: #1e293b;
+    line-height: 1.5;
 }
 
 .container {
-  width: 90%;
-  max-width: 1100px;
-  margin: auto;
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 24px;
 }
 
-header {
-  background: white;
-  padding: 20px 0;
-  border-bottom: 1px solid #e5e7eb;
-  position: sticky;
-  top: 0;
-  z-index: 100;
-}
-/* --- GLOBAL HEADER WRAPPER STYLES --- */
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 40px;
+/* --- HERO SECTION --- */
+.hero-section {
     background-color: #ffffff;
-    border-bottom: 1px solid #eaeaea; /* Subtle separator line */
-    position: sticky; /* Keeps header visible while scrolling */
-    top: 0;
-    z-index: 1000; /* Ensures it stays on top of page content */
+    padding: 100px 0 80px 0;
+    text-align: center;
 }
 
-/* Brand/Logo Text Styling */
-header .logo {
-    font-size: 1.25rem;
+.hero-section h1 {
+    font-size: 2.8rem;
     font-weight: 700;
-    color: #111111;
-    text-decoration: none;
-    letter-spacing: -0.01em;
+    color: #0f172a;
+    line-height: 1.2;
+    margin-bottom: 24px;
+    letter-spacing: -0.02em;
 }
 
-/* Header Navigation / Right Side Elements */
-header nav {
+.hero-subtext {
+    font-size: 1.2rem;
+    color: #475569;
+    max-width: 700px;
+    margin: 0 auto 36px auto;
+}
+
+/* --- BUTTONS --- */
+.hero-ctas {
     display: flex;
-    gap: 24px;
-    align-items: center;
+    gap: 16px;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
-header nav a {
-    font-size: 0.95rem;
-    font-weight: 500;
-    color: #555555;
+.btn-primary, .btn-secondary, .btn-banner {
+    display: inline-block;
+    padding: 12px 28px;
+    font-size: 1rem;
+    font-weight: 600;
     text-decoration: none;
-    transition: color 0.2s ease;
+    border-radius: 6px;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
 }
 
-header nav a:hover {
-    color: #0066cc; /* Shifts to your accent color on hover */
-}
-
-/* --- MOBILE STYLING --- */
-@media (max-width: 768px) {
-    header {
-        padding: 15px 20px; /* Reduces padding on smaller viewports */
-    }
-    
-    header nav {
-        gap: 16px; /* Closes the gap slightly between mobile links */
-    }
-}
-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.logo {
-  font-size: 24px;
-  font-weight: bold;
-  color: #2563eb;
-}
-
-.nav-links a {
-  margin-left: 20px;
-  text-decoration: none;
-  color: #374151;
-  font-weight: 500;
-}
-
-.hero {
-  padding: 100px 0;
-  text-align: center;
-  background: linear-gradient(to bottom right, #eff6ff, #ffffff);
-}
-
-.hero h1 {
-  font-size: 48px;
-  margin-bottom: 20px;
-  color: #111827;
-}
-
-.hero p {
-  max-width: 700px;
-  margin: auto;
-  font-size: 18px;
-  color: #4b5563;
-  margin-bottom: 30px;
-}
-
-.hero-buttons {
-  display: flex;
-  justify-content: center;
-  gap: 15px;
-  flex-wrap: wrap;
-}
-
-.btn {
-  padding: 14px 28px;
-  border-radius: 8px;
-  text-decoration: none;
-  font-weight: bold;
-  transition: 0.3s ease;
-  display: inline-block;
-}
-
+/* Primary Action Button (Contact Me) */
 .btn-primary {
-  background: #2563eb;
-  color: white;
+    background-color: #2563eb; /* Matches your distinct blue color theme */
+    color: #ffffff !important;
+    border: 2px solid #2563eb;
 }
 
 .btn-primary:hover {
-  background: #1d4ed8;
+    background-color: #1d4ed8;
+    border-color: #1d4ed8;
 }
 
+/* Secondary Ghost Button (WhatsApp Me) */
 .btn-secondary {
-  border: 2px solid #2563eb;
-  color: #2563eb;
-  background: white;
+    background-color: transparent;
+    color: #2563eb !important;
+    border: 2px solid #2563eb;
 }
 
 .btn-secondary:hover {
-  background: #eff6ff;
+    background-color: #eff6ff;
 }
 
-section {
-  padding: 80px 0;
+/* Banner Button */
+.btn-banner {
+    background-color: #ffffff;
+    color: #2563eb !important;
+    border: 2px solid #ffffff;
+    margin-top: 20px;
 }
 
-.section-title {
-  text-align: center;
-  font-size: 36px;
-  margin-bottom: 50px;
-  color: #111827;
+.btn-banner:hover {
+    background-color: #f1f5f9;
 }
 
-.services-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 25px;
+/* --- WHY WORK WITH ME (CARD) --- */
+.info-section {
+    padding: 60px 0;
 }
 
 .card {
-  background: white;
-  padding: 30px;
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.06);
-  transition: 0.3s ease;
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+    max-width: 800px;
+    margin: 0 auto;
 }
 
-.card:hover {
-  transform: translateY(-5px);
+.card h2 {
+    font-size: 1.8rem;
+    color: #0f172a;
+    margin-bottom: 16px;
+    text-align: center;
 }
 
-.card h3 {
-  margin-bottom: 15px;
-  color: #2563eb;
+.card-intro {
+    font-size: 1.05rem;
+    color: #475569;
+    text-align: center;
+    margin-bottom: 28px;
 }
 
-.about {
-  background: white;
-  border-radius: 14px;
-  padding: 50px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.06);
+.features-list {
+    list-style-type: none;
+    max-width: 500px;
+    margin: 0 auto;
 }
 
-.about ul {
-  margin-top: 20px;
-  padding-left: 20px;
+.features-list li {
+    font-size: 1rem;
+    color: #334155;
+    margin-bottom: 12px;
+    padding-left: 24px;
+    position: relative;
 }
 
-.about li {
-  margin-bottom: 12px;
+/* Custom modern dot list style */
+.features-list li::before {
+    content: "•";
+    color: #2563eb;
+    font-weight: bold;
+    font-size: 1.2rem;
+    position: absolute;
+    left: 0;
+    top: -2px;
 }
 
-.cta {
-  text-align: center;
-  background: #2563eb;
-  color: white;
-  border-radius: 16px;
-  padding: 70px 30px;
+/* --- BLUE MIDDLE BANNER --- */
+.banner-section {
+    background-color: #2563eb;
+    color: #ffffff;
+    padding: 60px 0;
+    text-align: center;
 }
 
-.cta h2 {
-  font-size: 38px;
-  margin-bottom: 20px;
+.banner-section h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 12px;
 }
 
-.cta p {
-  max-width: 650px;
-  margin: auto;
-  margin-bottom: 30px;
-  color: #dbeafe;
+.banner-section p {
+    font-size: 1.1rem;
+    max-width: 650px;
+    margin: 0 auto;
+    opacity: 0.9;
 }
 
-.contact {
-  text-align: center;
-  padding: 80px 0;
+/* --- CONTACT SECTION --- */
+.contact-section {
+    background-color: #ffffff;
+    padding: 60px 0 80px 0;
+    text-align: center;
 }
 
-.contact form {
-  max-width: 600px;
-  margin: auto;
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
+.contact-section h2 {
+    font-size: 2rem;
+    margin-bottom: 32px;
+    color: #0f172a;
 }
 
-.contact input,
-.contact textarea {
-  width: 100%;
-  padding: 15px;
-  border: 1px solid #d1d5db;
-  border-radius: 8px;
-  font-size: 16px;
+.contact-form {
+    max-width: 550px;
+    margin: 0 auto;
 }
 
-.contact textarea {
-  min-height: 140px;
+.form-group {
+    margin-bottom: 16px;
 }
 
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 14px 16px;
+    font-size: 1rem;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    background-color: #f8fafc;
+    font-family: inherit;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.contact-form input:focus, .contact-form textarea:focus {
+    border-color: #2563eb;
+    background-color: #ffffff;
+}
+
+.form-submit-btn {
+    width: 100%;
+    padding: 14px;
+    font-size: 1rem;
+    font-weight: 600;
+    background-color: #2563eb;
+    color: #ffffff; /* Sharp white readable text */
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.form-submit-btn:hover {
+    background-color: #1d4ed8;
+}
+
+/* --- FOOTER --- */
 footer {
-  background: #111827;
-  color: #9ca3af;
-  text-align: center;
-  padding: 30px 0;
-  margin-top: 50px;
+    background-color: #0f172a;
+    color: #94a3b8;
+    padding: 40px 0;
+    text-align: center;
+    font-size: 0.9rem;
 }
 
+.footer-link {
+    color: #38bdf8;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 8px;
+}
+
+.footer-link:hover {
+    text-decoration: underline;
+}
+
+/* --- RESPONSIVE LAYOUT --- */
 @media (max-width: 768px) {
-
-  .hero h1 {
-    font-size: 36px;
-  }
-
-  .section-title {
-    font-size: 30px;
-  }
-
-  .cta h2 {
-    font-size: 30px;
-  }
-
-  nav {
-    flex-direction: column;
-    gap: 15px;
-  }
-
+    .hero-section h1 {
+        font-size: 2.1rem;
+    }
+    .hero-subtext {
+        font-size: 1.1rem;
+    }
+    .banner-section h2 {
+        font-size: 1.6rem;
+    }
+    .hero-ctas {
+        flex-direction: column;
+    }
+    .btn-primary, .btn-secondary {
+        width: 100%;
+        text-align: center;
+    }
+    .card {
+        padding: 24px;
+    }
 }
