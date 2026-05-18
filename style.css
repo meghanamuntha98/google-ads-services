@@ -26,7 +26,57 @@ header {
   top: 0;
   z-index: 100;
 }
+/* --- GLOBAL HEADER WRAPPER STYLES --- */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background-color: #ffffff;
+    border-bottom: 1px solid #eaeaea; /* Subtle separator line */
+    position: sticky; /* Keeps header visible while scrolling */
+    top: 0;
+    z-index: 1000; /* Ensures it stays on top of page content */
+}
 
+/* Brand/Logo Text Styling */
+header .logo {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #111111;
+    text-decoration: none;
+    letter-spacing: -0.01em;
+}
+
+/* Header Navigation / Right Side Elements */
+header nav {
+    display: flex;
+    gap: 24px;
+    align-items: center;
+}
+
+header nav a {
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: #555555;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+header nav a:hover {
+    color: #0066cc; /* Shifts to your accent color on hover */
+}
+
+/* --- MOBILE STYLING --- */
+@media (max-width: 768px) {
+    header {
+        padding: 15px 20px; /* Reduces padding on smaller viewports */
+    }
+    
+    header nav {
+        gap: 16px; /* Closes the gap slightly between mobile links */
+    }
+}
 nav {
   display: flex;
   justify-content: space-between;
